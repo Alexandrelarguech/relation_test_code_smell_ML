@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/dataset/projects/commons-lang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataset/projects/hibernate-orm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataset/projects/jabref" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataset/projects/quarkus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataset/projects/resilience4j" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataset/projects/spring-boot" vcs="Git" />
+  </component>
+</project>
