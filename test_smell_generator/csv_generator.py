@@ -18,10 +18,8 @@ for name in projects:
         capture_output=True, text=True, timeout=120
     )
 
-    # Chercher le CSV généré dans le répertoire courant
     generated = glob.glob("*.csv")
     if generated:
-        # Prendre le plus récent
         latest = max(generated, key=os.path.getmtime)
         shutil.move(latest, output_csv)
         with open(output_csv, encoding="utf-8", errors="ignore") as f:

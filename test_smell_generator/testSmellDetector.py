@@ -16,7 +16,6 @@ for name in projects:
 
     print(f"[TestSmellDetector] {name}...")
     result = subprocess.run(
-        # Sans -f, juste le chemin direct
         ["java", "-jar", "tools/TestSmellDetector.jar", fixed_csv],
         capture_output=True, text=True,
         timeout=1800

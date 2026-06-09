@@ -27,7 +27,6 @@ for name in projects:
             if not os.path.exists(test_path):
                 continue
             seen_files.add(test_path)
-            # Format attendu par TestSmellDetector : appName,testFile,productionFile
             rows.append([name, test_path, ""])
 
     with open(fixed_csv, "w", newline="", encoding="utf-8") as f:

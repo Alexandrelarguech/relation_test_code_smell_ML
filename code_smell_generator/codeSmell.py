@@ -18,7 +18,6 @@ RULES = ",".join([
     "category/java/design.xml/CouplingBetweenObjects",
 ])
 
-# Cibler uniquement src/main/java pour chaque projet
 project_paths = {
     "spring-boot":  f"{PROJECTS_DIR}/spring-boot/core",
     "quarkus":      f"{PROJECTS_DIR}/quarkus/core",
