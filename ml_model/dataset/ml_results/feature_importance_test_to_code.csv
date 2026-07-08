@@ -1,0 +1,26 @@
+,0
+test_smell_Version,0.3162463312455723
+test_smell_App,0.26321212283169915
+test_smell_RelativeTestFilePath,0.21753877991690476
+test_smell_Conditional Test Logic,0.034127370800471964
+test_smell_Assertion Roulette,0.02921395400918961
+test_smell_Unknown Test,0.01981860365164076
+test_smell_Magic Number Test,0.01844687964155412
+test_smell_IgnoredTest,0.017777473484018664
+test_smell_Duplicate Assert,0.015981387561372823
+test_smell_Exception Catching Throwing,0.014859704591134395
+test_smell_Sensitive Equality,0.01118354367689118
+test_smell_General Fixture,0.011005983016192215
+test_smell_Constructor Initialization,0.007407670634940778
+test_smell_Redundant Assertion,0.004687913543816294
+test_smell_Mystery Guest,0.004647350161605995
+test_smell_Sleepy Test,0.004515703660112166
+test_smell_Resource Optimism,0.004410080481017339
+test_smell_Print Statement,0.0026939065738500584
+test_smell_EmptyTest,0.0016100747780497765
+test_smell_Verbose Test,0.0006151657399656402
+test_smell_RelativeProductionFilePath,0.0
+test_smell_Default Test,0.0
+test_smell_Lazy Test,0.0
+test_smell_Eager Test,0.0
+test_smell_Dependent Test,0.0
