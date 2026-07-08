@@ -1,20 +1,35 @@
-import subprocess
 import os
+import subprocess
+
+PROJECTS_DIR = "dataset/projects"
 
 projects = [
+    # Projets initiaux
     "spring-projects/spring-boot",
     "quarkusio/quarkus",
     "apache/commons-lang",
     "JabRef/jabref",
     "resilience4j/resilience4j",
     "hibernate/hibernate-orm",
+
+    # Projets supplémentaires proposés dans docs/open_source_projects_to_add.md
+    "elastic/elasticsearch",
+    "square/okhttp",
+    "apache/dubbo",
+    "google/guava",
+    "mockito/mockito",
+    "junit-team/junit5",
+    "netty/netty",
+    "apache/kafka",
+    "apache/cassandra",
+    "apache/pulsar",
 ]
 
-os.makedirs("../dataset/projects", exist_ok=True)
+os.makedirs(PROJECTS_DIR, exist_ok=True)
 
 for proj in projects:
     name = proj.split("/")[1]
-    dest = f"dataset/projects/{name}"
+    dest = os.path.join(PROJECTS_DIR, name)
     url = f"https://github.com/{proj}.git"
 
     if os.path.exists(dest):

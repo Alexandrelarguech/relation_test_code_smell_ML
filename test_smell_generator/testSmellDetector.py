@@ -1,17 +1,40 @@
-import subprocess, os, shutil, glob
+import glob
+import os
+import shutil
+import subprocess
 
-FIXED_DIR  = "../dataset/tsdetect_fixed"
-OUTPUT_DIR = "../dataset/test_smells"
+FIXED_DIR = "dataset/tsdetect_fixed"
+OUTPUT_DIR = "dataset/test_smells"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-projects = ["commons-lang", "resilience4j", "spring-boot", "quarkus", "hibernate-orm"]
+projects = [
+    "commons-lang",
+    "resilience4j",
+    "spring-boot",
+    "quarkus",
+    "hibernate-orm",
+    "elasticsearch",
+    "okhttp",
+    "dubbo",
+    "guava",
+    "mockito",
+    "junit5",
+    "netty",
+    "kafka",
+    "cassandra",
+    "pulsar",
+]
 
 for name in projects:
-    fixed_csv  = f"{FIXED_DIR}/{name}.csv"
-    output_csv = f"{OUTPUT_DIR}/{name}.csv"
+    fixed_csv = os.path.join(FIXED_DIR, f"{name}.csv")
+    output_csv = os.path.join(OUTPUT_DIR, f"{name}.csv")
 
     if os.path.exists(output_csv):
         print(f"[SKIP] {name}")
+        continue
+
+    if not os.path.exists(fixed_csv):
+        print(f"[MANQUANT] {name} : {fixed_csv}")
         continue
 
     print(f"[TestSmellDetector] {name}...")

@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-METRICS_DIR = "../dataset/metrics"
+METRICS_DIR = "dataset/metrics"
 
 for project in os.listdir(METRICS_DIR):
     project_path = f"{METRICS_DIR}/{project}"

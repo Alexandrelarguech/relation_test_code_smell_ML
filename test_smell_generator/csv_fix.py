@@ -1,15 +1,31 @@
 import os
 import csv
 
-INPUT_DIR  = "../dataset/tsdetect_input"
-FIXED_DIR  = "../dataset/tsdetect_fixed"
+INPUT_DIR = "dataset/tsdetect_input"
+FIXED_DIR = "dataset/tsdetect_fixed"
 os.makedirs(FIXED_DIR, exist_ok=True)
 
-projects = ["spring-boot", "quarkus", "commons-lang", "resilience4j", "hibernate-orm"]
+projects = [
+    "spring-boot",
+    "quarkus",
+    "commons-lang",
+    "resilience4j",
+    "hibernate-orm",
+    "elasticsearch",
+    "okhttp",
+    "dubbo",
+    "guava",
+    "mockito",
+    "junit5",
+    "netty",
+    "kafka",
+    "cassandra",
+    "pulsar",
+]
 
 for name in projects:
-    input_csv = f"{INPUT_DIR}/{name}.csv"
-    fixed_csv = f"{FIXED_DIR}/{name}.csv"
+    input_csv = os.path.join(INPUT_DIR, f"{name}.csv")
+    fixed_csv = os.path.join(FIXED_DIR, f"{name}.csv")
 
     if not os.path.exists(input_csv):
         print(f"[MANQUANT] {name}")

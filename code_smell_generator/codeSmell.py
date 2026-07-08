@@ -1,7 +1,7 @@
 import subprocess, os
 
-PROJECTS_DIR = "../dataset/projects"
-OUTPUT_DIR   = "../dataset/code_smells"
+PROJECTS_DIR = "dataset/projects"
+OUTPUT_DIR   = "dataset/code_smells"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -19,11 +19,24 @@ RULES = ",".join([
 ])
 
 project_paths = {
-    "spring-boot":  f"{PROJECTS_DIR}/spring-boot/core",
-    "quarkus":      f"{PROJECTS_DIR}/quarkus/core",
-    "commons-lang": f"{PROJECTS_DIR}/commons-lang",
-    "resilience4j": f"{PROJECTS_DIR}/resilience4j",
-    "hibernate-orm":f"{PROJECTS_DIR}/hibernate-orm",
+    # Projets initiaux
+    "spring-boot": os.path.join(PROJECTS_DIR, "spring-boot", "core"),
+    "quarkus": os.path.join(PROJECTS_DIR, "quarkus", "core"),
+    "commons-lang": os.path.join(PROJECTS_DIR, "commons-lang"),
+    "resilience4j": os.path.join(PROJECTS_DIR, "resilience4j"),
+    "hibernate-orm": os.path.join(PROJECTS_DIR, "hibernate-orm"),
+
+    # Projets supplémentaires proposés dans docs/open_source_projects_to_add.md
+    "elasticsearch": os.path.join(PROJECTS_DIR, "elasticsearch"),
+    "okhttp": os.path.join(PROJECTS_DIR, "okhttp"),
+    "dubbo": os.path.join(PROJECTS_DIR, "dubbo"),
+    "guava": os.path.join(PROJECTS_DIR, "guava"),
+    "mockito": os.path.join(PROJECTS_DIR, "mockito"),
+    "junit5": os.path.join(PROJECTS_DIR, "junit5"),
+    "netty": os.path.join(PROJECTS_DIR, "netty"),
+    "kafka": os.path.join(PROJECTS_DIR, "kafka"),
+    "cassandra": os.path.join(PROJECTS_DIR, "cassandra"),
+    "pulsar": os.path.join(PROJECTS_DIR, "pulsar"),
 }
 
 for name, src_path in project_paths.items():

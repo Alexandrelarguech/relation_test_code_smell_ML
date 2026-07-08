@@ -1,11 +1,27 @@
 import pandas as pd
 import os
 
-OUTPUT_DIR = "../dataset/code_smells"
-projects   = ["quarkus", "commons-lang", "resilience4j", "hibernate-orm", "spring-boot"]
+OUTPUT_DIR = "dataset/code_smells"
+projects = [
+    "quarkus",
+    "commons-lang",
+    "resilience4j",
+    "hibernate-orm",
+    "spring-boot",
+    "elasticsearch",
+    "okhttp",
+    "dubbo",
+    "guava",
+    "mockito",
+    "junit5",
+    "netty",
+    "kafka",
+    "cassandra",
+    "pulsar",
+]
 
 for name in projects:
-    csv_path = f"{OUTPUT_DIR}/{name}.csv"
+    csv_path = os.path.join(OUTPUT_DIR, f"{name}.csv")
     if not os.path.exists(csv_path):
         print(f"[MANQUANT] {name}")
         continue
@@ -26,7 +42,7 @@ for name in projects:
     )
     df_clean = df[~mask_test]
 
-    total_apres  = len(df_clean)
+    total_apres = len(df_clean)
     total_supprime = total_avant - total_apres
 
     df_clean.to_csv(csv_path, index=False, encoding="utf-8")
