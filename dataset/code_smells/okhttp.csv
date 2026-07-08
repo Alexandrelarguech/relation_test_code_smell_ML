@@ -1,0 +1,4 @@
+Problem,Package,File,Priority,Line,Description,Rule set,Rule
+1,okhttp3.sample,dataset\projects\okhttp\samples\crawler\src\main\java\okhttp3\sample\Crawler.java,3,89,The method 'fetch(HttpUrl)' has a cyclomatic complexity of 11.,Design,CyclomaticComplexity
+1,okhttp3.recipes,dataset\projects\okhttp\samples\guide\src\main\java\okhttp3\recipes\PrintEvents.java,3,77,"This class has too many methods, consider refactoring it.",Design,TooManyMethods
+1,okhttp3.recipes,dataset\projects\okhttp\samples\guide\src\main\java\okhttp3\recipes\PrintEventsNonConcurrent.java,3,64,"This class has too many methods, consider refactoring it.",Design,TooManyMethods
