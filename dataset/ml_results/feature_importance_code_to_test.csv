@@ -1,0 +1,7 @@
+,0
+code_smell_TooManyMethods,0.5319964356770858
+code_smell_CyclomaticComplexity,0.24261846703286102
+code_smell_CouplingBetweenObjects,0.12500895832459674
+code_smell_ExcessiveParameterList,0.053879709628052115
+code_smell_GodClass,0.0383557549264579
+code_smell_TooManyFields,0.008140674410946533

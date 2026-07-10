@@ -1,0 +1,22 @@
+,0
+test_smell_Assertion Roulette,0.21557632860773532
+test_smell_Unknown Test,0.20406951910005242
+test_smell_IgnoredTest,0.17046141338066123
+test_smell_Conditional Test Logic,0.08942028727738496
+test_smell_Exception Catching Throwing,0.08236273300421065
+test_smell_Magic Number Test,0.06935229814511716
+test_smell_Constructor Initialization,0.03632723154682106
+test_smell_Duplicate Assert,0.03605618088465838
+test_smell_General Fixture,0.026183575410250192
+test_smell_Sensitive Equality,0.02438654344614095
+test_smell_Redundant Assertion,0.012797512276895935
+test_smell_Resource Optimism,0.009850163925131694
+test_smell_Mystery Guest,0.00830983263255719
+test_smell_EmptyTest,0.006147888361084059
+test_smell_Print Statement,0.004088056506074946
+test_smell_Sleepy Test,0.003541278359381439
+test_smell_Verbose Test,0.001069157135842324
+test_smell_Default Test,0.0
+test_smell_Lazy Test,0.0
+test_smell_Eager Test,0.0
+test_smell_Dependent Test,0.0

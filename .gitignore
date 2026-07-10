@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+dataset/projects
+dataset/metrics
+dataset/code_smells
+dataset/test_smells
+

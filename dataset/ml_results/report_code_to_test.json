@@ -1,0 +1,37 @@
+{
+  "classification_report": {
+    "0": {
+      "precision": 0.620674740484429,
+      "recall": 0.6158798283261803,
+      "f1-score": 0.6182679879362344,
+      "support": 2330.0
+    },
+    "1": {
+      "precision": 0.7844412331406551,
+      "recall": 0.7878567972907595,
+      "f1-score": 0.7861453053342988,
+      "support": 4134.0
+    },
+    "accuracy": 0.7258663366336634,
+    "macro avg": {
+      "precision": 0.702557986812542,
+      "recall": 0.70186831280847,
+      "f1-score": 0.7022066466352666,
+      "support": 6464.0
+    },
+    "weighted avg": {
+      "precision": 0.7254103037023806,
+      "recall": 0.7258663366336634,
+      "f1-score": 0.7256325965568405,
+      "support": 6464.0
+    }
+  },
+  "roc_auc": 0.7076722188654327,
+  "baseline_accuracy": 0.6395420792079208,
+  "accuracy_lift_over_baseline": 0.08632425742574257,
+  "split": "group\u00e9 par 'project' (pas de fuite inter-projet)",
+  "class_balance_target": {
+    "1": 0.5763084926964526,
+    "0": 0.42369150730354743
+  }
+}
