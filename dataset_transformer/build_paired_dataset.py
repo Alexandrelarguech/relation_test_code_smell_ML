@@ -115,15 +115,22 @@ def aggregate_code_smells(rows: list[dict[str, str]]) -> tuple[dict[str, dict[st
     return by_class, columns
 
 
+TEST_METADATA_COLUMNS = {
+    "App", "Version", "TestFilePath", "ProductionFilePath",
+    "RelativeTestFilePath", "RelativeProductionFilePath",
+}
+
+
 def aggregate_test_smells(rows: list[dict[str, str]]) -> tuple[dict[str, list[dict[str, object]]], list[str]]:
     if not rows:
         return {}, []
     columns = list(rows[0].keys())
     test_file_col = find_column(columns, ["TestFilePath", "FilePath", "File", "Path"])
     prod_file_col = find_column(columns, ["ProductionFilePath", "ProductionFile", "ClassFile", "TestedFile"], fuzzy=False)
-    smell_cols = [c for c in columns if c not in {test_file_col, prod_file_col} and "smell" in c.lower()]
+    excluded = {test_file_col, prod_file_col, "Project", "TestClass", "Class"} | TEST_METADATA_COLUMNS
+    smell_cols = [c for c in columns if c not in excluded and "smell" in c.lower()]
     if not smell_cols:
-        smell_cols = [c for c in columns if c not in {test_file_col, prod_file_col, "Project", "TestClass", "Class"}]
+        smell_cols = [c for c in columns if c not in excluded]
 
     by_prod: dict[str, list[dict[str, object]]] = defaultdict(list)
     out_cols = [f"test_smell_{c}" for c in smell_cols]
