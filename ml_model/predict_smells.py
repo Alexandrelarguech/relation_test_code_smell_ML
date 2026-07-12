@@ -185,7 +185,7 @@ def compute_correlations(df, code_cols, test_cols, output_dir):
         pearson_matrix.astype(float), annot=False, cmap="coolwarm",
         center=0, vmin=-1, vmax=1,
     )
-    plt.title("Corrélation de Pearson : code smells (lignes) vs test smells (colonnes)")
+    plt.title("Pearson correlation : code smells (rows) vs test smells (columns)")
     plt.xlabel("Test smells")
     plt.ylabel("Code smells")
     plt.tight_layout()
@@ -291,14 +291,10 @@ def train_direction_model(df, feature_cols, target_col, model_name, output_dir,
     )
 
     print(f"\n[Modèle: {model_name}]")
-    print(f"  Cible                 : {target_col}")
-    print(f"  Split                 : {split_desc}")
-    print(f"  Nb features           : {len(feature_cols)}")
     print(f"  Accuracy              : {report['accuracy']:.3f}")
-    print(f"  Baseline (majoritaire): {baseline_accuracy:.3f}")
+    print(f"  Baseline : {baseline_accuracy:.3f}")
     print(f"  Gain vs baseline      : {lift:+.3f}"
           + ("  <-- attention, gain faible ou négatif : signal peu fiable" if lift < 0.05 else ""))
-    print(f"  ROC AUC               : {auc if auc is None else round(auc, 3)}")
     print(f"  Top 5 features        : {list(importances.head(5).index)}")
 
     return clf, report, auc
